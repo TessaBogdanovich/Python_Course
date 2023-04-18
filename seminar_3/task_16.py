@@ -7,12 +7,15 @@
 ## 1 2 3 4 5
 ## 3
 ## -> 1
+import random
 
-list = [1, 2, 3, 4, 5]
-print(list)
-y = 5
-count = 0
-for i in list:
-    if i == y:
-        count+=1
-print(count)
+N = int(input("Введите количество элементов: "))
+array = []
+minarr = int(input("Введите нижний порог значений в массиве: "))
+maxarr = int(input ("Введите верхний порог значчений в массиве: "))
+for i in range(1, N+1):
+    array.append(random.randint(minarr, maxarr))
+x = int(input("Введите искомое число: "))
+print(array)
+
+print(f"Элемент{x} встречаетс в массиве{array.count} {x}раз")

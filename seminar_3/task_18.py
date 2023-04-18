@@ -9,10 +9,22 @@
 ## 6
 ## -> 5
 
-list =[5, 7, 3, 2, 1, 2, 6, 7]
-print(list)
-y = 5
-count = 0
-for i in list:
-    if i == y or i == y+1 or i == y - 1:
-        print (i)
+import random
+import math
+
+N = int(input("Введите количество элементов: "))
+array = []
+minarr = int(input("Введите нижний порог значений в массиве: "))
+maxarr = int(input ("Введите верхний порог значчений в массиве: "))
+x = int(input("Введите искомое число: "))
+for i in range(N):
+    array.append(random.randint(minarr, maxarr))
+result = array[0]
+eps = x
+for i in array:
+    if abs (i - x) < eps:
+        eps = abs (i - x)
+        result = 1
+print (array)
+
+print (result)
