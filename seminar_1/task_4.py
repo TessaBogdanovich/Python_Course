@@ -5,7 +5,7 @@
 # чем Петя и Сережа вместе?
 
 S = int (input ("Введите сумму: "))
-Serge = S // 3 //2
+Serge = S //3 //2
 Petr = Serge
 print (f"Журавлики Сергея {Serge} и Журавлики Петра {Petr}")
 Kate = (Serge + Petr) * 2
